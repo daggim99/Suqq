@@ -1,3 +1,4 @@
+const path = require("path");
 const dotenv = require("dotenv");
 const Product = require("../models/product");
 const connectDatabase = require("../config/database");
@@ -5,7 +6,7 @@ const connectDatabase = require("../config/database");
 const products = require("../data/products");
 
 // Setting dotenv file
-dotenv.config({ path: "config/config.env" });
+dotenv.config({ path: path.resolve(__dirname, "../config/config.env") });
 
 connectDatabase();
 
