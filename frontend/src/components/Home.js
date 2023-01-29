@@ -159,9 +159,7 @@ const Home = ({ match }) => {
                   </div>
                 </Fragment>
               ) : (
-                products.map((product) => (
-                  <Product key={product._id} product={product} col={3} />
-                ))
+                products.map((product) => <Product product={product} col={3} />)
               )}
             </div>
           </section>
